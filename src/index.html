@@ -1,0 +1,821 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="./script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+    <main>
+        <!-- ==================  Switched Start  ==================== -->
+        <div class="fixed top-1/4 -right-1 z-50" onclick="toggleDarkMode()">
+            <span class="relative inline-block rotate-90">
+                <input id="themeSwitch" type="checkbox" class="checkbox opacity-0 absolute" />
+                <label
+                    class="bg-dark_bg dark:bg-white shadow dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8"
+                    for="chk">
+                    <img id="themeIcon" src="./images/moon.png" alt="moon" width="25px" height="25px" />
+                    <span
+                        class="ball bg-white dark:bg-slate-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+                </label>
+            </span>
+        </div>
+
+        <!-- ==================  Switcher End  ==================== -->
+
+        <!-- ==================  Header Start  ==================== -->
+
+        <header id="header"
+            class="sticky w-full top-0 bg-white lg:bg-light_bg shadow-lg md:shadow-none dark:bg-dark_bg z-50">
+            <!-- ==================  Navigation Start  ==================== -->
+
+            <nav class="w-4/5 m-auto py-4">
+                <div class="flex justify-between items-center">
+                    <div class="logo">
+                        <h1 class="text-black dark:text-white text-2xl font-black">
+                            Zaroon.
+                        </h1>
+                    </div>
+
+                    <div class="navigation hidden xl:block">
+                        <ul class="flex justify-between text-black font-semibold">
+                            <a href="#home">
+                                <li class="nav-items">Home</li>
+                            </a>
+                            <a href="#about">
+                                <li class="nav-items">About Us</li>
+                            </a>
+                            <a href="#services">
+                                <li class="nav-items">Services</li>
+                            </a>
+                            <a href="#experience">
+                                <li class="nav-items">Experience</li>
+                            </a>
+                            <a href="#projects">
+                                <li class="nav-items">Projects</li>
+                            </a>
+                            <a href="#contact">
+                                <li class="nav-items">Contact Us</li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="flex justify-end items-center gap-2">
+                        <button class="btn primary-btn sm:block hidden">
+                            Download CV
+                        </button>
+                        <i id="nav-toggle" class="block xl:hidden fas fa-bars text-2xl text-primary"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- ==================  Navigation End  ==================== -->
+        </header>
+
+        <!-- ==================  Mobile Navigation Start  ==================== -->
+
+        <div id="mobilemenu"
+            class="navigation absolute w-full -top-[407px] bg-primary_100 dark:bg-secondary transition-all duration-300 ease-in-out z-50">
+            <ul class="text-black font-semibold py-3 w-4/5 mx-auto">
+                <a href="#home">
+                    <li class="nav-items">Home</li>
+                </a>
+                <a href="#about">
+                    <li class="nav-items">About Us</li>
+                </a>
+                <a href="#services">
+                    <li class="nav-items">Services</li>
+                </a>
+                <a href="#experience">
+                    <li class="nav-items">Experience</li>
+                </a>
+                <a href="#projects">
+                    <li class="nav-items">Projects</li>
+                </a>
+                <a href="#contact">
+                    <li class="nav-items">Contact Us</li>
+                </a>
+            </ul>
+        </div>
+
+        <!-- ==================  Header End  ==================== -->
+
+        <!-- ==================  Hero section  ==================== -->
+        <section id="home" class="bg-light_bg dark:bg-dark_bg relative max-h-full">
+            <!-- ==================  Mobile Navigation End  ==================== -->
+
+            <div
+                class="intro w-4/5 m-auto grid lg:grid-cols-2 grid-cols-1 justify-center items-center py-4 md:py-0 md:static shadow-white">
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-black xsm:text-3xl lg:text-4xl xl:text-7xl text-black dark:text-white">
+                        Hi! I am <br /><span id="typing-text" class="text-primary mt-2"></span>
+                    </h2>
+                    <p>
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development.
+                    </p>
+                    <div class="about-buttons">
+                        <button class="btn primary-btn">Hire Me</button>
+                        <button class="btn secondary-btn">Download CV</button>
+                    </div>
+                </div>
+                <div class="img relative">
+                    <img src="./images/myimage.png" alt="myimage" class="h-[600px] justify-self-end" />
+
+                    <div class="experience-box cards absolute top-64 right-0">
+                        <h3 class="text-lg text-black dark:text-white mb-1">
+                            Web Designer
+                        </h3>
+                        <span class="text-base font-normal">7+ years Experience</span>
+                    </div>
+                    <div class="project-box cards absolute top-96 2xl:left-28 xsm:left-[-11px]">
+                        <h3 class="text-2xl font-black text-black dark:text-white mb-1">
+                            125+
+                        </h3>
+                        <span class="text-base font-normal">Project Complete</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute block w-full h-auto bottom-[25px] z-1 left-0">
+                    <a href="#about"><i
+                            class="fa-solid fa-arrow-down absolute top-0 left-0 right-0 text-center inline-flex items-center justify-center rounded-full bg-white dark:bg-secondary w-fit p-4 mx-auto shadow-md dark:shadow-gray-800"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  Hero Section End  ==================== -->
+
+        <!-- ==================  about us Start  ==================== -->
+
+        <section id="aboutus" class="lg:py-20 xsm:py-10 dark:bg-secondary">
+            <div class="w-4/5 m-auto grid lg:grid-cols-2 grid-cols-1 justify-center items-center gap-10">
+                <div class="img relative">
+                    <img src="./images/aboutus.jpg" alt="myimage" class="rounded-full" />
+
+                    <div
+                        class="experience-box cards absolute xsm:bottom-0 xsm:right-0 lg:bottom-20 lg:-right-8 xl:bottom-36 2xl:bottom-80">
+                        <h3 class="text-lg text-black dark:text-white mb-1">
+                            Web Designer
+                        </h3>
+                        <span class="text-base font-normal"><span class="text-xl text-primary font-bold">7+</span> years
+                            Experience</span>
+                    </div>
+                </div>
+
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-medium lg:text-2xl xsm:text-xl text-black dark:text-white">
+                        I'm a Passionate Web Designer
+                    </h2>
+                    <p>
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development cycle
+                        for dynamic web projects. The as opposed to using 'Content here,
+                        content here', making it look like readable English.
+                    </p>
+                    <p>
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development cycle
+                        for dynamic web projects. The as opposed to using 'Content here,
+                        content here', making it look like readable English.
+                    </p>
+                    <div class="about-buttons">
+                        <button class="btn secondary-btn">See Works</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  about us End  ==================== -->
+
+        <!-- ==================  Hobbies & Expertise  ==================== -->
+
+        <section id="aboutus" class="lg:py-10 xsm:py-5 dark:bg-secondary">
+            <div class="w-4/5 m-auto">
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-medium lg:text-2xl xsm:text-xl text-black dark:text-white text-center">
+                        Hobbies & Expertise
+                    </h2>
+                    <p class="text-center max-w-[470px] m-auto">
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development.
+                    </p>
+                </div>
+
+                <div
+                    class="py-5 grid xl:grid-cols-3 2xl:grid-cols-3 justify-center gap-10 xsm:grid-cols-1 justify- lg:grid-cols-2">
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-tv text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white">
+                            Development</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-brands fa-apple text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Mac OS</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-film text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Cinema</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-mug-hot text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Coffee</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-music text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Music </span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-dice-d6 text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Games</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-palette text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Designing</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-bicycle text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Sports</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-fill text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Painting</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-book-open text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Reading</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-robot text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white"> Android</span>
+                    </div>
+                    <div
+                        class="flex gap-5 rounded-lg shadow shadow-gray-200 dark:shadow-gray-800 dark:hover:shadow-gray-700 py-4 pl-2 pr-20 group">
+                        <i
+                            class="fa-solid fa-person-running text-lg text-primary bg-primary_100 p-3 rounded-full group-hover:bg-primary group-hover:text-white dark:bg-dark_200"></i>
+                        <span class="text-xl text-black dark:text-white">
+                            Other Activity
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  Hobbies & Expertise  ==================== -->
+
+        <!-- ==================  Services Section  ==================== -->
+
+        <section id="aboutus" class="lg:py-20 xsm:py-10 bg-gray_bg dark:bg-dark_100">
+            <div class="w-4/5 m-auto">
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-medium lg:text-2xl xsm:text-xl text-black dark:text-white text-center">
+                        What do i offer?
+                    </h2>
+                    <p class="text-center max-w-[470px] m-auto">
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development.
+                    </p>
+                </div>
+
+                <div class="grid xsm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 py-8 gap-10">
+                    <div
+                        class="flex flex-col px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl gap-5 dark:bg-dark_500">
+                        <i class="fa-brands fa-uikit text-3xl text-primary"></i>
+                        <spna class="text-2xl font-semibold text-black dark:text-white">UI/UX Design</spna>
+                        <p class="text-lg">
+                            The phrasal sequence of the is now so that many campaign and
+                            benefit
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl gap-5 dark:bg-dark_500">
+                        <i class="fa-brands fa-apple text-3xl text-primary"></i>
+                        <spna class="text-2xl font-semibold text-black dark:text-white">Ios App Designer</spna>
+                        <p class="text-lg">
+                            The phrasal sequence of the is now so that many campaign and
+                            benefit
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl gap-5 dark:bg-dark_500">
+                        <i class="fa-solid fa-camera text-3xl text-primary"></i>
+                        <spna class="text-2xl font-semibold text-black dark:text-white">Photography</spna>
+                        <p class="text-lg">
+                            The phrasal sequence of the is now so that many campaign and
+                            benefit
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl gap-5 dark:bg-dark_500">
+                        <i class="fa-solid fa-pen-nib text-3xl text-primary"></i>
+                        <spna class="text-2xl font-semibold text-black dark:text-white">Graphic Designer</spna>
+                        <p class="text-lg">
+                            The phrasal sequence of the is now so that many campaign and
+                            benefit
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl gap-5 dark:bg-dark_500">
+                        <i class="fa-solid fa-globe text-3xl text-primary"></i>
+                        <spna class="text-2xl font-semibold text-black dark:text-white">Web Security</spna>
+                        <p class="text-lg">
+                            The phrasal sequence of the is now so that many campaign and
+                            benefit
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col px-6 py-10 shadow shadow-gray-200 hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 transition duration-500 rounded-2xl gap-5 dark:bg-dark_500">
+                        <i class="fa-solid fa-headset text-3xl text-primary"></i>
+                        <spna class="font-semibold text-2xl text-black dark:text-white">24/7</spna>
+                        <p class="text-lg">
+                            The phrasal sequence of the is now so that many campaign and
+                            benefit
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  Services Section  ==================== -->
+
+        <!-- ==================  Freelance Section  ==================== -->
+
+        <section id="" class="lg:py-20 xsm:py-10 bg-[url('./images/bg2.jpg')] bg-center bg-no-repeat bg-cover relative">
+            <div class="absolute inset-0 bg-black bg-opacity-70 top-0 left-0"></div>
+            <div class="w-4/5 m-auto relative z-10">
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-medium lg:text-2xl xsm:text-xl text-white text-center">
+                        What do i offer?
+                    </h2>
+                    <p class="text-center max-w-[470px] m-auto text-white">
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development.
+                    </p>
+                    <button class="btn primary-btn w-fit text-center m-auto">
+                        Hire Now
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  Freelance Section  ==================== -->
+
+        <!-- ==================  Experience Section  ==================== -->
+
+        <section id="aboutus" class="lg:py-20 xsm:py-10 bg-gray_bg dark:bg-dark_100">
+            <div class="w-4/5 m-auto">
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-medium lg:text-2xl xsm:text-xl text-black dark:text-white text-center">
+                        Work Experience
+                    </h2>
+                    <p class="text-center max-w-[470px] m-auto">
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development.
+                    </p>
+                </div>
+
+                <div class="flex py-8 xl:gap-20 xsm:gap-10 flex-col w-full">
+                    <div
+                        class="flex xl:items-center xl:justify-end xl:gap-20 xl:flex-row w-full max-w-full xsm:flex-col xsm:gap-2 xsm:justify-start">
+                        <div class="flex flex-col gap-3 xl:w-fit xsm:w-full">
+                            <img src="./images/facebook-logo.png" alt="facebook-logo" width="36px" height="36px" />
+                            <span class="text-xl font-semibold text-black dark:text-white">FaceBook</span>
+                            <spna>2019-2021</spna>
+                        </div>
+
+                        <div class="flex gap-3 flex-col xl:w-[50%] xsm:w-full">
+                            <spna class="font-semibold text-xl text-black dark:text-white">Facebbok Designer</spna>
+                            <p class="text-lg">
+                                The generated injected humour, or non-characteristic words
+                                etc. Cum sociis natoque penatibus et magnis dis parturient
+                                montes, nascetur ridiculus mus. Donec quam felis,
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex xl:items-center xl:justify-start xl:text-right xl:gap-20 xl:flex-row w-full max-w-full xsm:flex-col-reverse xsm:gap-2 xsm:justify-start">
+                        <div class="flex gap-3 flex-col xl:w-[50%] xsm:w-full">
+                            <spna class="font-semibold text-xl text-black dark:text-white">Lenevo Designer</spna>
+                            <p class="text-lg">
+                                The generated injected humour, or non-characteristic words
+                                etc. Cum sociis natoque penatibus et magnis dis parturient
+                                montes, nascetur ridiculus mus. Donec quam felis,
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col gap-3 xl:w-fit xsm:w-full">
+                            <img src="./images/lenovo-logo.png" alt="facebook-logo" width="36px" height="36px" />
+                            <span class="text-xl font-semibold text-black dark:text-white">Lenevo</span>
+                            <spna>2019-2021</spna>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex xl:items-center xl:justify-end xl:gap-20 xl:flex-row w-full max-w-full xsm:flex-col xsm:gap-2 xsm:justify-start">
+                        <div class="flex flex-col gap-3 xl:w-fit xsm:w-full">
+                            <img src="./images/google-logo.png" alt="facebook-logo" width="36px" height="36px" />
+                            <span class="text-xl font-semibold text-black dark:text-white">Google</span>
+                            <spna>2019-2021</spna>
+                        </div>
+
+                        <div class="flex gap-3 flex-col xl:w-[50%] xsm:w-full">
+                            <spna class="font-semibold text-xl text-black dark:text-white">Google Developer</spna>
+                            <p class="text-lg">
+                                The generated injected humour, or non-characteristic words
+                                etc. Cum sociis natoque penatibus et magnis dis parturient
+                                montes, nascetur ridiculus mus. Donec quam felis,
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex xl:items-center xl:justify-start xl:text-right xl:gap-20 xl:flex-row w-full max-w-full xsm:flex-col-reverse xsm:gap-2 xsm:justify-start">
+                        <div class="flex gap-3 flex-col xl:w-[50%] xsm:w-full">
+                            <spna class="font-semibold text-xl text-black dark:text-white">Circl CI</spna>
+                            <p class="text-lg">
+                                The generated injected humour, or non-characteristic words
+                                etc. Cum sociis natoque penatibus et magnis dis parturient
+                                montes, nascetur ridiculus mus. Donec quam felis,
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col gap-3 xl:w-fit xsm:w-full">
+                            <img src="./images/circle-logo.png" alt="facebook-logo" width="36px" height="36px" />
+                            <span class="text-xl font-semibold text-black dark:text-white">Circl CI</span>
+                            <spna>2019-2021</spna>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  Experience Section  ==================== -->
+
+        <!-- ==================  My Project Sections  ==================== -->
+
+        <section id="projects" class="lg:py-20 xsm:py-10 dark:bg-secondary">
+            <div class="w-4/5 m-auto">
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-medium lg:text-2xl xsm:text-xl text-black dark:text-white text-center">
+                        My Work & Projects
+                    </h2>
+                    <p class="text-center max-w-[470px] m-auto">
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development.
+                    </p>
+                </div>
+
+                <div class="grid xl:grid-cols-4 xsm:grid-cols-1 lg:grid-cols-2 py-10 gap-5">
+                    <div class="relative group">
+                        <div
+                            class=" inset-0 absolute  bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                        </div>
+                        <img src="./images/project/project1.jpg" alt="project" width="500px" height="500px"
+                            class="rounded-lg transition-all duration-300 z-0 project-img" />
+                        <div
+                            class="flex flex-col absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <p class="project-title text-xl text-white hover:text-primary font-black">
+                                Project 1
+                            </p>
+                            <p class="project-des text-lg">My Project 1</p>
+                        </div>
+                        <i
+                            class="fa-solid fa-camera project-icons absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-primary text-white hover:bg-primary_dark p-3 rounded-full text-lg"></i>
+                    </div>
+
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                        </div>
+                        <img src="./images/project/project2.jpg" alt="project" width="500px" height="500px"
+                            class="rounded-lg transition-all duration-300 z-0 project-img" />
+                        <div
+                            class="flex flex-col absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <p class="project-title text-xl text-white hover:text-primary font-black">
+                                Project 2
+                            </p>
+                            <p class="project-des text-lg">My Project 2</p>
+                        </div>
+                        <i
+                            class="fa-solid fa-camera project-icons absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-primary text-white hover:bg-primary_dark p-3 rounded-full text-lg"></i>
+                    </div>
+
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                        </div>
+                        <img src="./images/project/project3.jpg" alt="project" width="500px" height="500px"
+                            class="rounded-lg transition-all duration-300 z-0 project-img" />
+                        <div
+                            class="flex flex-col absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <p class="project-title text-xl text-white hover:text-primary font-black">
+                                Project 3
+                            </p>
+                            <p class="project-des text-lg">My Project 3</p>
+                        </div>
+                        <i
+                            class="fa-solid fa-camera project-icons absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-primary text-white hover:bg-primary_dark p-3 rounded-full text-lg"></i>
+                    </div>
+
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                        </div>
+                        <img src="./images/project/project4.jpg" alt="project" width="500px" height="500px"
+                            class="rounded-lg transition-all duration-300 z-0 project-img" />
+                        <div
+                            class="flex flex-col absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <p class="project-title text-xl text-white hover:text-primary font-black">
+                                Project 4
+                            </p>
+                            <p class="project-des text-lg">My Project 4</p>
+                        </div>
+                        <i
+                            class="fa-solid fa-camera project-icons absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-primary text-white hover:bg-primary_dark p-3 rounded-full text-lg"></i>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                        </div>
+                        <img src="./images/project/project5.jpg" alt="project" width="500px" height="500px"
+                            class="rounded-lg transition-all duration-300 z-0 project-img" />
+                        <div
+                            class="flex flex-col absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <p class="project-title text-xl text-white hover:text-primary font-black">
+                                Project 5
+                            </p>
+                            <p class="project-des text-lg">My Project 5</p>
+                        </div>
+                        <i
+                            class="fa-solid fa-camera project-icons absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-primary text-white hover:bg-primary_dark p-3 rounded-full text-lg"></i>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                        </div>
+                        <img src="./images/project/project6.jpg" alt="project" width="500px" height="500px"
+                            class="rounded-lg transition-all duration-300 z-0 project-img" />
+                        <div
+                            class="flex flex-col absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <p class="project-title text-xl text-white hover:text-primary font-black">
+                                Project 6
+                            </p>
+                            <p class="project-des text-lg">My Project 6</p>
+                        </div>
+                        <i
+                            class="fa-solid fa-camera project-icons absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-primary text-white hover:bg-primary_dark p-3 rounded-full text-lg"></i>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                        </div>
+                        <img src="./images/project/project7.jpg" alt="project" width="500px" height="500px"
+                            class="rounded-lg transition-all duration-300 z-0 project-img" />
+                        <div
+                            class="flex flex-col absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <p class="project-title text-xl text-white hover:text-primary font-black">
+                                Project 7
+                            </p>
+                            <p class="project-des text-lg">My Project 7</p>
+                        </div>
+                        <i
+                            class="fa-solid fa-camera project-icons absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-primary text-white hover:bg-primary_dark p-3 rounded-full text-lg"></i>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">
+                        </div>
+                        <img src="./images/project/project8.jpg" alt="project" width="500px" height="500px"
+                            class="rounded-lg transition-all duration-300 z-0 project-img" />
+                        <div
+                            class="flex flex-col absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <p class="project-title text-xl text-white hover:text-primary font-black">
+                                Project 8
+                            </p>
+                            <p class="project-des text-lg">My Project 8</p>
+                        </div>
+                        <i
+                            class="fa-solid fa-camera project-icons absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 bg-primary text-white hover:bg-primary_dark p-3 rounded-full text-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  My Project Section  ==================== -->
+
+        <!-- ==================  Gallery   ==================== -->
+
+        <div
+            class="model-box hidden fixed w-full h-full bg-gradient-to-t from-[rgba(0,0,0,0.8)] to-[rgba(255,255,255,0.5)] inset-0 z-50">
+            <div>
+                <img src="./images/project/project1.jpg" width="500px" height="500px"
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-lg model-img xsm:w-full xsm:h-full" />
+                <div class="flex flex-col absolute bottom-10 right-1/2 xsm:top:1/2 xsm:left:1/2">
+                    <p class="model-title text-xl text-white hover:text-primary font-black">
+                        Project 1
+                    </p>
+                    <p class="model-des text-lg">My Project</p>
+                </div>
+                <i
+                    class="cross fa-solid fa-xmark absolute top-10 right-16 font-semibold bg-primary hover:bg-primary_dark text-lg text-white p-3 rounded-full"></i>
+                <i
+                    class="next fa-solid fa-chevron-right absolute top-1/2 right-16 font-semibold bg-primary hover:bg-primary_dark text-lg text-white p-3 rounded-full"></i>
+                <i
+                    class="back fa-solid fa-chevron-left absolute top-1/2 left-16 font-semibold bg-primary hover:bg-primary_dark text-lg text-white p-3 rounded-full"></i>
+            </div>
+        </div>
+
+        <!-- ==================  Gallery  ==================== -->
+
+        <!-- ==================  Clients Review Sections  ==================== -->
+
+        <section id="aboutus" class="lg:py-20 xsm:py-10 bg-gray_bg dark:bg-dark_100">
+            <div class="w-4/5 m-auto">
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-medium lg:text-2xl xsm:text-xl text-black dark:text-white text-center">
+                        Client's Review
+                    </h2>
+                    <p class="text-center max-w-[470px] m-auto">
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap lg:flex-nowrap">
+                    <div class="flex flex-col py-4 justify-center items-center">
+                        <div
+                            class="bg-white dark:bg-dark_600 rounded shadow shadow-gray-200 dark:shadow-gray-800 m-2 p-6 relative">
+                            <i class="fa-solid fa-quote-left text-3xl text-primary"></i>
+                            <p class="text-lg">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Commodi, dignissimos.Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Commodi, dignissimos.
+                            </p>
+                            <ul class="star-rating flex gap-1">
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                            </ul>
+                            <i class="fa-solid fa-caret-down text-5xl m-auto absolute -bottom-[31px] right-1/2"></i>
+                        </div>
+                        <div class="text-center pt-4">
+                            <img src="./images/review.jpg" width="80px" height="80px" alt="reviews"
+                                class="rounded-full" />
+                            <p
+                                class="text-xl text-black hover:text-primary dark:hover:text-primary dark:text-white font-medium">
+                                Client 1
+                            </p>
+                            <p class="text-lg">Designation</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col py-4 justify-center items-center">
+                        <div
+                            class="bg-white dark:bg-dark_600 rounded shadow shadow-gray-200 dark:shadow-gray-800 m-2 p-6 relative">
+                            <i class="fa-solid fa-quote-left text-3xl text-primary"></i>
+                            <p class="text-lg">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Commodi, dignissimos.Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Commodi, dignissimos.
+                            </p>
+                            <ul class="star-rating flex gap-1">
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                            </ul>
+                            <i class="fa-solid fa-caret-down text-5xl m-auto absolute -bottom-[31px] right-1/2"></i>
+                        </div>
+                        <div class="text-center pt-4">
+                            <img src="./images/review.jpg" width="80px" height="80px" alt="reviews"
+                                class="rounded-full" />
+                            <p
+                                class="text-xl text-black hover:text-primary dark:hover:text-primary dark:text-white font-medium">
+                                Client 1
+                            </p>
+                            <p class="text-lg">Designation</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col py-4 justify-center items-center">
+                        <div
+                            class="bg-white dark:bg-dark_600 rounded shadow shadow-gray-200 dark:shadow-gray-800 m-2 p-6 relative">
+                            <i class="fa-solid fa-quote-left text-3xl text-primary"></i>
+                            <p class="text-lg">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Commodi, dignissimos.Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Commodi, dignissimos.
+                            </p>
+                            <ul class="star-rating flex gap-1">
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                                <li class="star filled text-primary_400">&#9733;</li>
+                            </ul>
+                            <i class="fa-solid fa-caret-down text-5xl m-auto absolute -bottom-[31px] right-1/2"></i>
+                        </div>
+                        <div class="text-center pt-4">
+                            <img src="./images/review.jpg" width="80px" height="80px" alt="reviews"
+                                class="rounded-full" />
+                            <p
+                                class="text-xl text-black hover:text-primary dark:hover:text-primary dark:text-white font-medium">
+                                Client 1
+                            </p>
+                            <p class="text-lg">Designation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  Clients Review Sections  ==================== -->
+
+        <!-- ==================  Get In touch start  ==================== -->
+
+        <section id="projects" class="lg:py-20 xsm:py-10 dark:bg-secondary">
+            <div class="w-4/5 m-auto">
+                <div class="about flex flex-col gap-5">
+                    <h2 class="font-medium lg:text-2xl xsm:text-xl text-black dark:text-white text-center">
+                        Get in Touch
+                    </h2>
+                    <p class="text-center max-w-[470px] m-auto">
+                        Obviously I'm a Web Designer. Web Developer with over 7 years of
+                        experience. Experienced with all stages of the development.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 mt-8 items-center gap-[30px] justify-center">
+                    <div class="p-6 rounded-md shadow bg-white dark:bg-dark_600">
+                        <form action="" class="flex flex-col gap-5">
+                            <div class="flex gap-3 w-full">
+                                <input type="text" placeholder="Enter Your Name"
+                                    class="border border-gray-100 rounded-md p-2 w-full bg-transparent" />
+                                <input type="email" placeholder="Enter Your Email"
+                                    class="border border-gray-100 rounded-md p-2 w-full bg-transparent" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Subject"
+                                    class="border border-gray-100 rounded-md p-2 w-full bg-transparent" />
+                            </div>
+                            <div class="w-full">
+                                <textarea rows="4" cols="50" placeholder="Enter your text here..."
+                                    class="border border-gray-100 rounded-md p-2 w-full bg-transparent"></textarea>
+                            </div>
+                            <input class="btn primary-btn w-2/6" type="submit" placeholder="submit" />
+                        </form>
+                    </div>
+
+                    <div class="">
+                        <div class="flex justify-start gap-2 align-middle">
+                            <i class="fa-solid fa-phone text-black dark:text-white"></i>
+
+                            <div class="flex flex-col">
+                                <h5 class="text-[17px] text-black dark:text-white font-medium">
+                                    Phone
+                                </h5>
+                                <a href="" class="text-black dark:text-white font-bold">+152 534-468-854</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================  Get in touch End  ==================== -->
+    </main>
+</body>
+
+</html>
